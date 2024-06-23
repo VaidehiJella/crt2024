@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        long n=s.nextLong();
+        long r1,r2,r3;
+     r1=n%10;
+     r2=n-r1;
+     r3=n-r1+10;
+    if(r1>=5)
+    {
+        System.out.printf("%d",r3);
+    }
+    else
+    {
+        System.out.printf("%d",r2);
+    }
+        
+    }
+}
