@@ -1,0 +1,52 @@
+Write a program to sort the given string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+print the ascending order of given string.
+
+Sample Input 0
+
+god
+Sample Output 0
+
+dgo
+Sample Input 1
+
+python
+Sample Output 1
+
+hnopty
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        String str=s.nextLine();
+        int n=str.length();
+        char ch[]=str.toCharArray();
+        for(int i=0;i<n-1;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if(ch[i]>ch[j])
+                {
+                    char temp=ch[i];
+                    ch[i]=ch[j];
+                    ch[j]=temp;
+                }
+            }
+        }
+        System.out.println(ch);
+    }
+}
