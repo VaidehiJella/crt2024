@@ -1,0 +1,51 @@
+Read a stirng and convert upper case into lower case and vice versa
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+Print result string
+
+Sample Input 0
+
+Java Language
+Sample Output 0
+
+jAVA lANGUAGE
+Sample Input 1
+
+pYtHOn Is SIMPLE language
+Sample Output 1
+
+PyThoN iS simple LANGUAGE
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        String str=s.nextLine();
+        String res="";
+        for(int i=0;i<str.length();i++)
+        {
+            char s1=str.charAt(i);
+            if(Character.isLowerCase(s1))
+            {
+               res=res+Character.toUpperCase(s1);
+            }
+            else
+                res=res+Character.toLowerCase(s1);
+            
+        }
+        System.out.println(res);
+        
+    }
+}
